@@ -1,0 +1,711 @@
+2024-10-19 17:38:38,218 INFO: Starting Wake Up Babe application
+2024-10-19 17:38:38,219 INFO: Fetching movie releases from 2024-10-19 to 2024-10-26
+2024-10-19 17:38:38,251 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-19 17:38:38,357 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/movie?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-19&primary_release_date.lte=2024-10-26&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-19 17:38:38,358 INFO: Retrieved 20 movie releases
+2024-10-19 17:38:38,358 INFO: Fetching tv releases from 2024-10-19 to 2024-10-26
+2024-10-19 17:38:38,360 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-19 17:38:38,449 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/tv?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-19&primary_release_date.lte=2024-10-26&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-19 17:38:38,450 INFO: Retrieved 20 tv releases
+2024-10-19 17:38:38,476 DEBUG: Starting new HTTPS connection (1): id.twitch.tv:443
+2024-10-19 17:38:38,965 DEBUG: https://id.twitch.tv:443 "POST /oauth2/token?client_id=futiq5agsqffytatg4hy5k8mnb5uyg&client_secret=6fzys4ry675m8smpjqzbpgvxd7l5n8&grant_type=client_credentials HTTP/11" 200 93
+2024-10-19 17:38:38,966 DEBUG: IGDB Access Token Response: {'access_token': 'uqf8nsi1gtczgezh83eg54zkvmm5mg', 'expires_in': 5169580, 'token_type': 'bearer'}
+2024-10-19 17:38:38,967 INFO: Fetching game releases from 2024-10-19 to 2024-10-26
+2024-10-19 17:38:38,972 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/release_dates, Data=
+            fields game, date, platform;
+            where date >= 1729314000 & date <= 1729918800;
+            sort date asc;
+        
+2024-10-19 17:38:38,993 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-19 17:38:39,600 DEBUG: https://api.igdb.com:443 "POST /v4/release_dates HTTP/11" 200 None
+2024-10-19 17:38:39,603 DEBUG: IGDB Release Dates Response: [{'id': 631369, 'date': 1729382400, 'game': 314034, 'platform': 34}, {'id': 650715, 'date': 1729382400, 'game': 318953, 'platform': 471}, {'id': 650716, 'date': 1729382400, 'game': 318953, 'platform': 386}, {'id': 654270, 'date': 1729382400, 'game': 306358, 'platform': 6}, {'id': 654271, 'date': 1729382400, 'game': 306358, 'platform': 14}, {'id': 654272, 'date': 1729382400, 'game': 306358, 'platform': 3}, {'id': 655215, 'date': 1729382400, 'game': 288044, 'platform': 34}, {'id': 655216, 'date': 1729382400, 'game': 288044, 'platform': 39}, {'id': 415690, 'date': 1729468800, 'game': 223326, 'platform': 6}, {'id': 415691, 'date': 1729468800, 'game': 223326, 'platform': 14}]
+2024-10-19 17:38:39,603 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/games, Data=
+            fields id, name;
+            where id = (318953,288044,314034,306358,223326);
+        
+2024-10-19 17:38:39,607 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-19 17:38:40,007 DEBUG: https://api.igdb.com:443 "POST /v4/games HTTP/11" 200 None
+2024-10-19 17:38:40,008 DEBUG: IGDB Games Response for IDs [318953, 288044, 314034, 306358, 223326]: [{'id': 223326, 'name': 'SCP: Facility'}, {'id': 288044, 'name': 'Neko Atsume 2'}, {'id': 306358, 'name': "Devil's Way"}, {'id': 314034, 'name': 'Dark Legacy'}, {'id': 318953, 'name': 'Extinction Facility'}]
+2024-10-19 17:38:40,009 INFO: Retrieved 10 game releases
+2024-10-19 17:38:40,009 INFO: Calculated excitement score for Venom: The Last Dance: 89.20
+2024-10-19 17:38:40,009 INFO: Calculated excitement score for Bull Run: 55.97
+2024-10-19 17:38:40,009 INFO: Calculated excitement score for Nightmare Hospital: 55.28
+2024-10-19 17:38:40,009 INFO: Calculated excitement score for Holiday Crashers: 53.33
+2024-10-19 17:38:40,009 INFO: Calculated excitement score for Conclave: 49.92
+2024-10-19 17:38:40,009 INFO: Calculated excitement score for Lost & Found in Cleveland: 51.48
+2024-10-19 17:38:40,009 INFO: Calculated excitement score for Love, Danielle: 50.89
+2024-10-19 17:38:40,009 INFO: Calculated excitement score for To Pee or Not to Pee: 49.80
+2024-10-19 17:38:40,009 INFO: Calculated excitement score for Stealing Pulp Fiction: 49.72
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for Love Live! Nijigasaki High School Idol Club 7th Live! NEW TOKIMEKI LAND: 49.72
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for The Metropolitan Opera: Grounded: 49.31
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for The Return: 49.28
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for Boundary Waters: 48.92
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for The Gatekeeper: 48.38
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for The Grimm Backward: 47.25
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for Midwest Sessions: 46.75
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for Viva Verdi!: 46.30
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for Atypical Pirate: 46.24
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for Sans film: 46.07
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for Something Better Change: 46.01
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for Ici tout commence: 60.00
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for Chronicles of the Sun: 60.00
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for Pulang Araw: 60.00
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for Plus belle la vie, encore plus belle: 60.00
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for Pinoy Big Brother: 60.00
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for Tagesschau: 60.00
+2024-10-19 17:38:40,010 INFO: Calculated excitement score for Mom for rent: 60.00
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for The First Years: 60.00
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for El Conde: Amor y Honor: 60.00
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for Gutfeld!: 60.00
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for Gute Zeiten, schlechte Zeiten: 60.00
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for Fugitivas, en busca de la libertad: 60.00
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for Strictly Come Dancing: It Takes Two: 60.00
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for Kelders van Geheime: 60.00
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for Ready Steady Cook South Africa: 60.00
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for Agatha All Along: 70.80
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for The People's Police: 82.20
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for FROM: 60.00
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for Volta por Cima: 78.00
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for Mania de Você: 65.40
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for Dark Legacy: 30.40
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for Extinction Facility: 30.40
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for Extinction Facility: 30.40
+2024-10-19 17:38:40,011 INFO: Calculated excitement score for Devil's Way: 30.40
+2024-10-19 17:38:40,012 INFO: Calculated excitement score for Devil's Way: 30.40
+2024-10-19 17:38:40,012 INFO: Calculated excitement score for Devil's Way: 30.40
+2024-10-19 17:38:40,012 INFO: Calculated excitement score for Neko Atsume 2: 30.40
+2024-10-19 17:38:40,012 INFO: Calculated excitement score for Neko Atsume 2: 30.40
+2024-10-19 17:38:40,012 INFO: Calculated excitement score for SCP: Facility: 31.00
+2024-10-19 17:38:40,012 INFO: Calculated excitement score for SCP: Facility: 31.00
+2024-10-19 17:47:02,374 INFO: Starting Wake Up Babe application
+2024-10-19 17:47:02,374 INFO: Fetching movie releases from 2024-10-19 to 2024-10-26
+2024-10-19 17:47:02,436 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-19 17:47:02,560 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/movie?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-19&primary_release_date.lte=2024-10-26&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-19 17:47:02,561 INFO: Retrieved 20 movie releases
+2024-10-19 17:47:02,562 INFO: Fetching tv releases from 2024-10-19 to 2024-10-26
+2024-10-19 17:47:02,564 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-19 17:47:02,650 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/tv?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-19&primary_release_date.lte=2024-10-26&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-19 17:47:02,653 INFO: Retrieved 20 tv releases
+2024-10-19 17:47:02,698 DEBUG: Starting new HTTPS connection (1): id.twitch.tv:443
+2024-10-19 17:47:03,215 DEBUG: https://id.twitch.tv:443 "POST /oauth2/token?client_id=futiq5agsqffytatg4hy5k8mnb5uyg&client_secret=6fzys4ry675m8smpjqzbpgvxd7l5n8&grant_type=client_credentials HTTP/11" 200 93
+2024-10-19 17:47:03,215 DEBUG: IGDB Access Token Response: {'access_token': 'cfad4iadptelvg8i4nx437as0sks1m', 'expires_in': 5480091, 'token_type': 'bearer'}
+2024-10-19 17:47:03,216 INFO: Fetching game releases from 2024-10-19 to 2024-10-26
+2024-10-19 17:47:03,217 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/release_dates, Data=
+            fields game, date, platform;
+            where date >= 1729314000 & date <= 1729918800;
+            sort date asc;
+        
+2024-10-19 17:47:03,283 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-19 17:47:03,916 DEBUG: https://api.igdb.com:443 "POST /v4/release_dates HTTP/11" 200 None
+2024-10-19 17:47:03,919 DEBUG: IGDB Release Dates Response: [{'id': 631369, 'date': 1729382400, 'game': 314034, 'platform': 34}, {'id': 650715, 'date': 1729382400, 'game': 318953, 'platform': 471}, {'id': 650716, 'date': 1729382400, 'game': 318953, 'platform': 386}, {'id': 654270, 'date': 1729382400, 'game': 306358, 'platform': 6}, {'id': 654271, 'date': 1729382400, 'game': 306358, 'platform': 14}, {'id': 654272, 'date': 1729382400, 'game': 306358, 'platform': 3}, {'id': 655215, 'date': 1729382400, 'game': 288044, 'platform': 34}, {'id': 655216, 'date': 1729382400, 'game': 288044, 'platform': 39}, {'id': 415690, 'date': 1729468800, 'game': 223326, 'platform': 6}, {'id': 415691, 'date': 1729468800, 'game': 223326, 'platform': 14}]
+2024-10-19 17:47:03,919 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/games, Data=
+            fields id, name;
+            where id = (318953,288044,314034,306358,223326);
+        
+2024-10-19 17:47:03,923 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-19 17:47:04,472 DEBUG: https://api.igdb.com:443 "POST /v4/games HTTP/11" 200 None
+2024-10-19 17:47:04,475 DEBUG: IGDB Games Response for IDs [318953, 288044, 314034, 306358, 223326]: [{'id': 223326, 'name': 'SCP: Facility'}, {'id': 288044, 'name': 'Neko Atsume 2'}, {'id': 306358, 'name': "Devil's Way"}, {'id': 314034, 'name': 'Dark Legacy'}, {'id': 318953, 'name': 'Extinction Facility'}]
+2024-10-19 17:47:04,475 WARNING: Game ID 318953 not found in game data or duplicate.
+2024-10-19 17:47:04,475 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 17:47:04,476 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 17:47:04,476 WARNING: Game ID 288044 not found in game data or duplicate.
+2024-10-19 17:47:04,476 WARNING: Game ID 223326 not found in game data or duplicate.
+2024-10-19 17:47:04,476 INFO: Retrieved 5 game releases
+2024-10-19 17:47:04,476 INFO: Calculated excitement score for Venom: The Last Dance: 89.20
+2024-10-19 17:47:04,476 INFO: Calculated excitement score for Bull Run: 55.97
+2024-10-19 17:47:04,476 INFO: Calculated excitement score for Nightmare Hospital: 55.28
+2024-10-19 17:47:04,476 INFO: Calculated excitement score for Holiday Crashers: 53.33
+2024-10-19 17:47:04,477 INFO: Calculated excitement score for Conclave: 49.92
+2024-10-19 17:47:04,477 INFO: Calculated excitement score for Lost & Found in Cleveland: 51.48
+2024-10-19 17:47:04,477 INFO: Calculated excitement score for Love, Danielle: 50.89
+2024-10-19 17:47:04,477 INFO: Calculated excitement score for To Pee or Not to Pee: 49.80
+2024-10-19 17:47:04,477 INFO: Calculated excitement score for Stealing Pulp Fiction: 49.72
+2024-10-19 17:47:04,477 INFO: Calculated excitement score for Love Live! Nijigasaki High School Idol Club 7th Live! NEW TOKIMEKI LAND: 49.72
+2024-10-19 17:47:04,477 INFO: Calculated excitement score for The Metropolitan Opera: Grounded: 49.31
+2024-10-19 17:47:04,477 INFO: Calculated excitement score for The Return: 49.28
+2024-10-19 17:47:04,478 INFO: Calculated excitement score for Boundary Waters: 48.92
+2024-10-19 17:47:04,478 INFO: Calculated excitement score for The Gatekeeper: 48.38
+2024-10-19 17:47:04,478 INFO: Calculated excitement score for The Grimm Backward: 47.25
+2024-10-19 17:47:04,478 INFO: Calculated excitement score for Midwest Sessions: 46.75
+2024-10-19 17:47:04,478 INFO: Calculated excitement score for Viva Verdi!: 46.30
+2024-10-19 17:47:04,478 INFO: Calculated excitement score for Atypical Pirate: 46.24
+2024-10-19 17:47:04,478 INFO: Calculated excitement score for Sans film: 46.07
+2024-10-19 17:47:04,478 INFO: Calculated excitement score for Something Better Change: 46.01
+2024-10-19 17:47:04,478 INFO: Calculated excitement score for Ici tout commence: 60.00
+2024-10-19 17:47:04,479 INFO: Calculated excitement score for Chronicles of the Sun: 60.00
+2024-10-19 17:47:04,479 INFO: Calculated excitement score for Pulang Araw: 60.00
+2024-10-19 17:47:04,479 INFO: Calculated excitement score for Plus belle la vie, encore plus belle: 60.00
+2024-10-19 17:47:04,479 INFO: Calculated excitement score for Pinoy Big Brother: 60.00
+2024-10-19 17:47:04,479 INFO: Calculated excitement score for Tagesschau: 60.00
+2024-10-19 17:47:04,480 INFO: Calculated excitement score for Mom for rent: 60.00
+2024-10-19 17:47:04,480 INFO: Calculated excitement score for The First Years: 60.00
+2024-10-19 17:47:04,480 INFO: Calculated excitement score for El Conde: Amor y Honor: 60.00
+2024-10-19 17:47:04,480 INFO: Calculated excitement score for Gutfeld!: 60.00
+2024-10-19 17:47:04,480 INFO: Calculated excitement score for Gute Zeiten, schlechte Zeiten: 60.00
+2024-10-19 17:47:04,480 INFO: Calculated excitement score for Fugitivas, en busca de la libertad: 60.00
+2024-10-19 17:47:04,480 INFO: Calculated excitement score for Strictly Come Dancing: It Takes Two: 60.00
+2024-10-19 17:47:04,481 INFO: Calculated excitement score for Kelders van Geheime: 60.00
+2024-10-19 17:47:04,481 INFO: Calculated excitement score for Ready Steady Cook South Africa: 60.00
+2024-10-19 17:47:04,481 INFO: Calculated excitement score for Agatha All Along: 70.80
+2024-10-19 17:47:04,481 INFO: Calculated excitement score for The People's Police: 82.20
+2024-10-19 17:47:04,481 INFO: Calculated excitement score for FROM: 60.00
+2024-10-19 17:47:04,481 INFO: Calculated excitement score for Volta por Cima: 78.00
+2024-10-19 17:47:04,481 INFO: Calculated excitement score for Mania de Você: 65.40
+2024-10-19 17:47:04,481 INFO: Calculated excitement score for Dark Legacy: 30.40
+2024-10-19 17:47:04,481 INFO: Calculated excitement score for Extinction Facility: 30.40
+2024-10-19 17:47:04,481 INFO: Calculated excitement score for Devil's Way: 30.40
+2024-10-19 17:47:04,481 INFO: Calculated excitement score for Neko Atsume 2: 30.40
+2024-10-19 17:47:04,481 INFO: Calculated excitement score for SCP: Facility: 31.00
+2024-10-19 17:50:06,022 INFO: Starting Wake Up Babe application
+2024-10-19 17:50:06,022 INFO: Fetching movie releases from 2024-10-19 to 2024-10-26
+2024-10-19 17:50:06,047 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-19 17:50:06,195 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/movie?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-19&primary_release_date.lte=2024-10-26&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-19 17:50:06,196 INFO: Retrieved 20 movie releases
+2024-10-19 17:50:06,197 INFO: Fetching tv releases from 2024-10-19 to 2024-10-26
+2024-10-19 17:50:06,199 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-19 17:50:06,289 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/tv?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-19&primary_release_date.lte=2024-10-26&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-19 17:50:06,290 INFO: Retrieved 20 tv releases
+2024-10-19 17:50:06,316 DEBUG: Starting new HTTPS connection (1): id.twitch.tv:443
+2024-10-19 17:50:06,817 DEBUG: https://id.twitch.tv:443 "POST /oauth2/token?client_id=futiq5agsqffytatg4hy5k8mnb5uyg&client_secret=6fzys4ry675m8smpjqzbpgvxd7l5n8&grant_type=client_credentials HTTP/11" 200 93
+2024-10-19 17:50:06,819 DEBUG: IGDB Access Token Response: {'access_token': 'r72t0cplof95wi74z4zh7voeavfomz', 'expires_in': 4684873, 'token_type': 'bearer'}
+2024-10-19 17:50:06,820 INFO: Fetching game releases from 2024-10-19 to 2024-10-26
+2024-10-19 17:50:06,823 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/release_dates, Data=
+            fields game, date, platform;
+            where date >= 1729314000 & date <= 1729918800;
+            sort date asc;
+        
+2024-10-19 17:50:06,826 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-19 17:50:07,308 DEBUG: https://api.igdb.com:443 "POST /v4/release_dates HTTP/11" 200 None
+2024-10-19 17:50:07,311 DEBUG: IGDB Release Dates Response: [{'id': 631369, 'date': 1729382400, 'game': 314034, 'platform': 34}, {'id': 650715, 'date': 1729382400, 'game': 318953, 'platform': 471}, {'id': 650716, 'date': 1729382400, 'game': 318953, 'platform': 386}, {'id': 654270, 'date': 1729382400, 'game': 306358, 'platform': 6}, {'id': 654271, 'date': 1729382400, 'game': 306358, 'platform': 14}, {'id': 654272, 'date': 1729382400, 'game': 306358, 'platform': 3}, {'id': 655215, 'date': 1729382400, 'game': 288044, 'platform': 34}, {'id': 655216, 'date': 1729382400, 'game': 288044, 'platform': 39}, {'id': 415690, 'date': 1729468800, 'game': 223326, 'platform': 6}, {'id': 415691, 'date': 1729468800, 'game': 223326, 'platform': 14}]
+2024-10-19 17:50:07,311 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/games, Data=
+            fields id, name, popularity, rating, total_rating;
+            where id = 223326;
+        
+2024-10-19 17:50:07,316 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-19 17:50:07,669 DEBUG: https://api.igdb.com:443 "POST /v4/games HTTP/11" 400 118
+2024-10-19 17:50:07,671 ERROR: Error fetching game data for ID 223326: 400 Client Error: Bad Request for url: https://api.igdb.com/v4/games
+2024-10-19 17:50:07,671 WARNING: Game ID 314034 not found in game data or duplicate.
+2024-10-19 17:50:07,671 WARNING: Game ID 318953 not found in game data or duplicate.
+2024-10-19 17:50:07,671 WARNING: Game ID 318953 not found in game data or duplicate.
+2024-10-19 17:50:07,672 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 17:50:07,672 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 17:50:07,672 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 17:50:07,672 WARNING: Game ID 288044 not found in game data or duplicate.
+2024-10-19 17:50:07,672 WARNING: Game ID 288044 not found in game data or duplicate.
+2024-10-19 17:50:07,672 WARNING: Game ID 223326 not found in game data or duplicate.
+2024-10-19 17:50:07,672 WARNING: Game ID 223326 not found in game data or duplicate.
+2024-10-19 17:50:07,672 INFO: Retrieved 0 game releases
+2024-10-19 17:50:07,672 INFO: Calculated excitement score for Venom: The Last Dance: 80.20
+2024-10-19 17:50:07,672 INFO: Calculated excitement score for Bull Run: 53.01
+2024-10-19 17:50:07,673 INFO: Calculated excitement score for Nightmare Hospital: 52.43
+2024-10-19 17:50:07,673 INFO: Calculated excitement score for Holiday Crashers: 50.81
+2024-10-19 17:50:07,673 INFO: Calculated excitement score for Conclave: 47.27
+2024-10-19 17:50:07,673 INFO: Calculated excitement score for Lost & Found in Cleveland: 49.27
+2024-10-19 17:50:07,673 INFO: Calculated excitement score for Love, Danielle: 48.78
+2024-10-19 17:50:07,673 INFO: Calculated excitement score for To Pee or Not to Pee: 47.87
+2024-10-19 17:50:07,673 INFO: Calculated excitement score for Stealing Pulp Fiction: 47.80
+2024-10-19 17:50:07,673 INFO: Calculated excitement score for Love Live! Nijigasaki High School Idol Club 7th Live! NEW TOKIMEKI LAND: 47.80
+2024-10-19 17:50:07,674 INFO: Calculated excitement score for The Metropolitan Opera: Grounded: 47.46
+2024-10-19 17:50:07,674 INFO: Calculated excitement score for The Return: 47.43
+2024-10-19 17:50:07,674 INFO: Calculated excitement score for Boundary Waters: 47.13
+2024-10-19 17:50:07,674 INFO: Calculated excitement score for The Gatekeeper: 46.68
+2024-10-19 17:50:07,674 INFO: Calculated excitement score for The Grimm Backward: 45.74
+2024-10-19 17:50:07,674 INFO: Calculated excitement score for Midwest Sessions: 45.33
+2024-10-19 17:50:07,674 INFO: Calculated excitement score for Viva Verdi!: 44.95
+2024-10-19 17:50:07,674 INFO: Calculated excitement score for Atypical Pirate: 44.90
+2024-10-19 17:50:07,674 INFO: Calculated excitement score for Sans film: 44.76
+2024-10-19 17:50:07,674 INFO: Calculated excitement score for Something Better Change: 44.71
+2024-10-19 17:50:07,674 INFO: Calculated excitement score for Ici tout commence: 52.00
+2024-10-19 17:50:07,675 INFO: Calculated excitement score for Chronicles of the Sun: 52.00
+2024-10-19 17:50:07,675 INFO: Calculated excitement score for Pulang Araw: 57.10
+2024-10-19 17:50:07,675 INFO: Calculated excitement score for Plus belle la vie, encore plus belle: 52.00
+2024-10-19 17:50:07,675 INFO: Calculated excitement score for Pinoy Big Brother: 52.00
+2024-10-19 17:50:07,675 INFO: Calculated excitement score for Tagesschau: 52.00
+2024-10-19 17:50:07,675 INFO: Calculated excitement score for Mom for rent: 52.00
+2024-10-19 17:50:07,675 INFO: Calculated excitement score for The First Years: 52.00
+2024-10-19 17:50:07,675 INFO: Calculated excitement score for El Conde: Amor y Honor: 52.00
+2024-10-19 17:50:07,675 INFO: Calculated excitement score for Gutfeld!: 52.00
+2024-10-19 17:50:07,676 INFO: Calculated excitement score for Gute Zeiten, schlechte Zeiten: 52.00
+2024-10-19 17:50:07,676 INFO: Calculated excitement score for Fugitivas, en busca de la libertad: 52.00
+2024-10-19 17:50:07,676 INFO: Calculated excitement score for Strictly Come Dancing: It Takes Two: 52.00
+2024-10-19 17:50:07,676 INFO: Calculated excitement score for Kelders van Geheime: 52.00
+2024-10-19 17:50:07,676 INFO: Calculated excitement score for Ready Steady Cook South Africa: 52.00
+2024-10-19 17:50:07,676 INFO: Calculated excitement score for Agatha All Along: 72.40
+2024-10-19 17:50:07,676 INFO: Calculated excitement score for The People's Police: 78.10
+2024-10-19 17:50:07,676 INFO: Calculated excitement score for FROM: 52.00
+2024-10-19 17:50:07,676 INFO: Calculated excitement score for Volta por Cima: 76.00
+2024-10-19 17:50:07,676 INFO: Calculated excitement score for Mania de Você: 69.70
+2024-10-19 22:58:56,475 INFO: Starting Wake Up Babe application
+2024-10-19 22:58:56,475 INFO: Fetching movie releases from 2024-10-19 to 2024-10-26
+2024-10-19 22:58:56,508 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-19 22:58:56,613 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/movie?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-19&primary_release_date.lte=2024-10-26&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-19 22:58:56,614 INFO: Retrieved 20 movie releases
+2024-10-19 22:58:56,614 INFO: Fetching tv releases from 2024-10-19 to 2024-10-26
+2024-10-19 22:58:56,616 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-19 22:58:56,778 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/tv?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-19&primary_release_date.lte=2024-10-26&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-19 22:58:56,779 INFO: Retrieved 20 tv releases
+2024-10-19 22:58:56,813 DEBUG: Starting new HTTPS connection (1): id.twitch.tv:443
+2024-10-19 22:58:57,334 DEBUG: https://id.twitch.tv:443 "POST /oauth2/token?client_id=futiq5agsqffytatg4hy5k8mnb5uyg&client_secret=6fzys4ry675m8smpjqzbpgvxd7l5n8&grant_type=client_credentials HTTP/11" 200 93
+2024-10-19 22:58:57,335 DEBUG: IGDB Access Token Response: {'access_token': 'a0ksdg8t03l65zv49zx1mvdd9bzvui', 'expires_in': 5070552, 'token_type': 'bearer'}
+2024-10-19 22:58:57,335 INFO: Fetching game releases from 2024-10-19 to 2024-10-26
+2024-10-19 22:58:57,340 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/release_dates, Data=
+            fields game, date, platform;
+            where date >= 1729314000 & date <= 1729918800;
+            sort date asc;
+        
+2024-10-19 22:58:57,363 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-19 22:58:58,646 DEBUG: https://api.igdb.com:443 "POST /v4/release_dates HTTP/11" 200 None
+2024-10-19 22:58:58,648 DEBUG: IGDB Release Dates Response: [{'id': 631369, 'date': 1729382400, 'game': 314034, 'platform': 34}, {'id': 650715, 'date': 1729382400, 'game': 318953, 'platform': 471}, {'id': 650716, 'date': 1729382400, 'game': 318953, 'platform': 386}, {'id': 654270, 'date': 1729382400, 'game': 306358, 'platform': 6}, {'id': 654271, 'date': 1729382400, 'game': 306358, 'platform': 14}, {'id': 654272, 'date': 1729382400, 'game': 306358, 'platform': 3}, {'id': 655215, 'date': 1729382400, 'game': 288044, 'platform': 34}, {'id': 655216, 'date': 1729382400, 'game': 288044, 'platform': 39}, {'id': 415690, 'date': 1729468800, 'game': 223326, 'platform': 6}, {'id': 415691, 'date': 1729468800, 'game': 223326, 'platform': 14}]
+2024-10-19 22:58:58,648 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/games, Data=
+            fields id, name, popularity, rating, total_rating;
+            where id = 223326;
+        
+2024-10-19 22:58:58,651 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-19 22:58:58,944 DEBUG: https://api.igdb.com:443 "POST /v4/games HTTP/11" 400 118
+2024-10-19 22:58:58,945 ERROR: Error fetching game data for ID 223326: 400 Client Error: Bad Request for url: https://api.igdb.com/v4/games
+2024-10-19 22:58:58,946 WARNING: Game ID 314034 not found in game data or duplicate.
+2024-10-19 22:58:58,946 WARNING: Game ID 318953 not found in game data or duplicate.
+2024-10-19 22:58:58,946 WARNING: Game ID 318953 not found in game data or duplicate.
+2024-10-19 22:58:58,946 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 22:58:58,946 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 22:58:58,946 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 22:58:58,946 WARNING: Game ID 288044 not found in game data or duplicate.
+2024-10-19 22:58:58,947 WARNING: Game ID 288044 not found in game data or duplicate.
+2024-10-19 22:58:58,947 WARNING: Game ID 223326 not found in game data or duplicate.
+2024-10-19 22:58:58,947 WARNING: Game ID 223326 not found in game data or duplicate.
+2024-10-19 22:58:58,947 INFO: Retrieved 0 game releases
+2024-10-19 22:58:58,947 INFO: Calculated excitement score for Venom: The Last Dance: 80.20
+2024-10-19 22:58:58,947 INFO: Calculated excitement score for Bull Run: 53.01
+2024-10-19 22:58:58,947 INFO: Calculated excitement score for Nightmare Hospital: 52.43
+2024-10-19 22:58:58,947 INFO: Calculated excitement score for Holiday Crashers: 50.81
+2024-10-19 22:58:58,948 INFO: Calculated excitement score for Conclave: 47.27
+2024-10-19 22:58:58,948 INFO: Calculated excitement score for Lost & Found in Cleveland: 49.27
+2024-10-19 22:58:58,948 INFO: Calculated excitement score for Love, Danielle: 48.78
+2024-10-19 22:58:58,948 INFO: Calculated excitement score for To Pee or Not to Pee: 47.87
+2024-10-19 22:58:58,948 INFO: Calculated excitement score for Stealing Pulp Fiction: 47.80
+2024-10-19 22:58:58,948 INFO: Calculated excitement score for Love Live! Nijigasaki High School Idol Club 7th Live! NEW TOKIMEKI LAND: 47.80
+2024-10-19 22:58:58,948 INFO: Calculated excitement score for The Metropolitan Opera: Grounded: 47.46
+2024-10-19 22:58:58,948 INFO: Calculated excitement score for The Return: 47.43
+2024-10-19 22:58:58,948 INFO: Calculated excitement score for Boundary Waters: 47.13
+2024-10-19 22:58:58,948 INFO: Calculated excitement score for The Gatekeeper: 46.68
+2024-10-19 22:58:58,949 INFO: Calculated excitement score for The Grimm Backward: 45.74
+2024-10-19 22:58:58,949 INFO: Calculated excitement score for Midwest Sessions: 45.33
+2024-10-19 22:58:58,949 INFO: Calculated excitement score for Viva Verdi!: 44.95
+2024-10-19 22:58:58,949 INFO: Calculated excitement score for Atypical Pirate: 44.90
+2024-10-19 22:58:58,949 INFO: Calculated excitement score for Sans film: 44.76
+2024-10-19 22:58:58,949 INFO: Calculated excitement score for Something Better Change: 44.71
+2024-10-19 22:58:58,949 INFO: Calculated excitement score for Ici tout commence: 52.00
+2024-10-19 22:58:58,949 INFO: Calculated excitement score for Chronicles of the Sun: 52.00
+2024-10-19 22:58:58,949 INFO: Calculated excitement score for Pulang Araw: 57.10
+2024-10-19 22:58:58,950 INFO: Calculated excitement score for Plus belle la vie, encore plus belle: 52.00
+2024-10-19 22:58:58,950 INFO: Calculated excitement score for Pinoy Big Brother: 52.00
+2024-10-19 22:58:58,950 INFO: Calculated excitement score for Tagesschau: 52.00
+2024-10-19 22:58:58,950 INFO: Calculated excitement score for Mom for rent: 52.00
+2024-10-19 22:58:58,950 INFO: Calculated excitement score for The First Years: 52.00
+2024-10-19 22:58:58,950 INFO: Calculated excitement score for El Conde: Amor y Honor: 52.00
+2024-10-19 22:58:58,950 INFO: Calculated excitement score for Gutfeld!: 52.00
+2024-10-19 22:58:58,950 INFO: Calculated excitement score for Gute Zeiten, schlechte Zeiten: 52.00
+2024-10-19 22:58:58,950 INFO: Calculated excitement score for Fugitivas, en busca de la libertad: 52.00
+2024-10-19 22:58:58,950 INFO: Calculated excitement score for Strictly Come Dancing: It Takes Two: 52.00
+2024-10-19 22:58:58,951 INFO: Calculated excitement score for Kelders van Geheime: 52.00
+2024-10-19 22:58:58,951 INFO: Calculated excitement score for Ready Steady Cook South Africa: 52.00
+2024-10-19 22:58:58,951 INFO: Calculated excitement score for Agatha All Along: 72.40
+2024-10-19 22:58:58,951 INFO: Calculated excitement score for The People's Police: 78.10
+2024-10-19 22:58:58,951 INFO: Calculated excitement score for FROM: 52.00
+2024-10-19 22:58:58,951 INFO: Calculated excitement score for Volta por Cima: 76.00
+2024-10-19 22:58:58,951 INFO: Calculated excitement score for Mania de Você: 69.70
+2024-10-19 23:02:05,518 INFO: Starting Wake Up Babe application
+2024-10-19 23:02:05,519 INFO: Fetching movie releases from 2024-10-19 to 2024-10-26
+2024-10-19 23:02:05,551 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-19 23:02:05,678 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/movie?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-19&primary_release_date.lte=2024-10-26&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-19 23:02:05,679 INFO: Retrieved 20 movie releases
+2024-10-19 23:02:05,679 INFO: Fetching tv releases from 2024-10-19 to 2024-10-26
+2024-10-19 23:02:05,681 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-19 23:02:05,766 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/tv?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-19&primary_release_date.lte=2024-10-26&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-19 23:02:05,768 INFO: Retrieved 20 tv releases
+2024-10-19 23:02:05,801 DEBUG: Starting new HTTPS connection (1): id.twitch.tv:443
+2024-10-19 23:02:06,297 DEBUG: https://id.twitch.tv:443 "POST /oauth2/token?client_id=futiq5agsqffytatg4hy5k8mnb5uyg&client_secret=6fzys4ry675m8smpjqzbpgvxd7l5n8&grant_type=client_credentials HTTP/11" 200 93
+2024-10-19 23:02:06,298 DEBUG: IGDB Access Token Response: {'access_token': 'iucq3pump7vb3qv3kqzv1pz4kwqs9n', 'expires_in': 5666043, 'token_type': 'bearer'}
+2024-10-19 23:02:06,299 INFO: Fetching game releases from 2024-10-19 to 2024-10-26
+2024-10-19 23:02:06,302 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/release_dates, Data=
+            fields game, date, platform;
+            where date >= 1729314000 & date <= 1729918800;
+            sort date asc;
+        
+2024-10-19 23:02:06,306 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-19 23:02:06,962 DEBUG: https://api.igdb.com:443 "POST /v4/release_dates HTTP/11" 200 None
+2024-10-19 23:02:06,964 DEBUG: IGDB Release Dates Response: [{'id': 631369, 'date': 1729382400, 'game': 314034, 'platform': 34}, {'id': 650715, 'date': 1729382400, 'game': 318953, 'platform': 471}, {'id': 650716, 'date': 1729382400, 'game': 318953, 'platform': 386}, {'id': 654270, 'date': 1729382400, 'game': 306358, 'platform': 6}, {'id': 654271, 'date': 1729382400, 'game': 306358, 'platform': 14}, {'id': 654272, 'date': 1729382400, 'game': 306358, 'platform': 3}, {'id': 655215, 'date': 1729382400, 'game': 288044, 'platform': 34}, {'id': 655216, 'date': 1729382400, 'game': 288044, 'platform': 39}, {'id': 415690, 'date': 1729468800, 'game': 223326, 'platform': 6}, {'id': 415691, 'date': 1729468800, 'game': 223326, 'platform': 14}]
+2024-10-19 23:02:06,964 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/games, Data=
+            fields id, name;  # Start with just id and name to avoid errors
+            where id = 223326;
+        
+2024-10-19 23:02:06,968 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-19 23:02:07,273 DEBUG: https://api.igdb.com:443 "POST /v4/games HTTP/11" 400 58
+2024-10-19 23:02:07,275 ERROR: Error fetching game data for ID 223326: 400 Client Error: Bad Request for url: https://api.igdb.com/v4/games
+2024-10-19 23:02:07,275 WARNING: Game ID 314034 not found in game data or duplicate.
+2024-10-19 23:02:07,275 WARNING: Game ID 318953 not found in game data or duplicate.
+2024-10-19 23:02:07,275 WARNING: Game ID 318953 not found in game data or duplicate.
+2024-10-19 23:02:07,276 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 23:02:07,276 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 23:02:07,276 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 23:02:07,276 WARNING: Game ID 288044 not found in game data or duplicate.
+2024-10-19 23:02:07,276 WARNING: Game ID 288044 not found in game data or duplicate.
+2024-10-19 23:02:07,276 WARNING: Game ID 223326 not found in game data or duplicate.
+2024-10-19 23:02:07,276 WARNING: Game ID 223326 not found in game data or duplicate.
+2024-10-19 23:02:07,276 INFO: Retrieved 0 game releases
+2024-10-19 23:02:07,277 INFO: Calculated excitement score for Venom: The Last Dance: 80.20
+2024-10-19 23:02:07,277 INFO: Calculated excitement score for Bull Run: 53.01
+2024-10-19 23:02:07,277 INFO: Calculated excitement score for Nightmare Hospital: 52.43
+2024-10-19 23:02:07,277 INFO: Calculated excitement score for Holiday Crashers: 50.81
+2024-10-19 23:02:07,277 INFO: Calculated excitement score for Conclave: 47.27
+2024-10-19 23:02:07,277 INFO: Calculated excitement score for Lost & Found in Cleveland: 49.27
+2024-10-19 23:02:07,277 INFO: Calculated excitement score for Love, Danielle: 48.78
+2024-10-19 23:02:07,278 INFO: Calculated excitement score for To Pee or Not to Pee: 47.87
+2024-10-19 23:02:07,278 INFO: Calculated excitement score for Stealing Pulp Fiction: 47.80
+2024-10-19 23:02:07,278 INFO: Calculated excitement score for Love Live! Nijigasaki High School Idol Club 7th Live! NEW TOKIMEKI LAND: 47.80
+2024-10-19 23:02:07,278 INFO: Calculated excitement score for The Metropolitan Opera: Grounded: 47.46
+2024-10-19 23:02:07,278 INFO: Calculated excitement score for The Return: 47.43
+2024-10-19 23:02:07,278 INFO: Calculated excitement score for Boundary Waters: 47.13
+2024-10-19 23:02:07,278 INFO: Calculated excitement score for The Gatekeeper: 46.68
+2024-10-19 23:02:07,278 INFO: Calculated excitement score for The Grimm Backward: 45.74
+2024-10-19 23:02:07,279 INFO: Calculated excitement score for Midwest Sessions: 45.33
+2024-10-19 23:02:07,279 INFO: Calculated excitement score for Viva Verdi!: 44.95
+2024-10-19 23:02:07,279 INFO: Calculated excitement score for Atypical Pirate: 44.90
+2024-10-19 23:02:07,279 INFO: Calculated excitement score for Sans film: 44.76
+2024-10-19 23:02:07,279 INFO: Calculated excitement score for Something Better Change: 44.71
+2024-10-19 23:02:07,279 INFO: Calculated excitement score for Ici tout commence: 52.00
+2024-10-19 23:02:07,279 INFO: Calculated excitement score for Chronicles of the Sun: 52.00
+2024-10-19 23:02:07,280 INFO: Calculated excitement score for Pulang Araw: 57.10
+2024-10-19 23:02:07,280 INFO: Calculated excitement score for Plus belle la vie, encore plus belle: 52.00
+2024-10-19 23:02:07,280 INFO: Calculated excitement score for Pinoy Big Brother: 52.00
+2024-10-19 23:02:07,280 INFO: Calculated excitement score for Tagesschau: 52.00
+2024-10-19 23:02:07,280 INFO: Calculated excitement score for Mom for rent: 52.00
+2024-10-19 23:02:07,280 INFO: Calculated excitement score for The First Years: 52.00
+2024-10-19 23:02:07,281 INFO: Calculated excitement score for El Conde: Amor y Honor: 52.00
+2024-10-19 23:02:07,281 INFO: Calculated excitement score for Gutfeld!: 52.00
+2024-10-19 23:02:07,281 INFO: Calculated excitement score for Gute Zeiten, schlechte Zeiten: 52.00
+2024-10-19 23:02:07,281 INFO: Calculated excitement score for Fugitivas, en busca de la libertad: 52.00
+2024-10-19 23:02:07,282 INFO: Calculated excitement score for Strictly Come Dancing: It Takes Two: 52.00
+2024-10-19 23:02:07,282 INFO: Calculated excitement score for Kelders van Geheime: 52.00
+2024-10-19 23:02:07,282 INFO: Calculated excitement score for Ready Steady Cook South Africa: 52.00
+2024-10-19 23:02:07,282 INFO: Calculated excitement score for Agatha All Along: 72.40
+2024-10-19 23:02:07,282 INFO: Calculated excitement score for The People's Police: 78.10
+2024-10-19 23:02:07,282 INFO: Calculated excitement score for FROM: 52.00
+2024-10-19 23:02:07,282 INFO: Calculated excitement score for Volta por Cima: 76.00
+2024-10-19 23:02:07,282 INFO: Calculated excitement score for Mania de Você: 69.70
+2024-10-19 23:02:37,869 INFO: Starting Wake Up Babe application
+2024-10-19 23:02:37,869 INFO: Fetching movie releases from 2024-10-19 to 2024-10-26
+2024-10-19 23:02:37,874 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-19 23:02:37,962 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/movie?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-19&primary_release_date.lte=2024-10-26&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-19 23:02:37,962 INFO: Retrieved 20 movie releases
+2024-10-19 23:02:37,963 INFO: Fetching tv releases from 2024-10-19 to 2024-10-26
+2024-10-19 23:02:37,965 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-19 23:02:38,057 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/tv?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-19&primary_release_date.lte=2024-10-26&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-19 23:02:38,057 INFO: Retrieved 20 tv releases
+2024-10-19 23:02:38,060 DEBUG: Starting new HTTPS connection (1): id.twitch.tv:443
+2024-10-19 23:02:38,574 DEBUG: https://id.twitch.tv:443 "POST /oauth2/token?client_id=futiq5agsqffytatg4hy5k8mnb5uyg&client_secret=6fzys4ry675m8smpjqzbpgvxd7l5n8&grant_type=client_credentials HTTP/11" 200 93
+2024-10-19 23:02:38,575 DEBUG: IGDB Access Token Response: {'access_token': '00f72nx592vsy9s5wfrem31x2obzch', 'expires_in': 5167408, 'token_type': 'bearer'}
+2024-10-19 23:02:38,576 INFO: Fetching game releases from 2024-10-19 to 2024-10-26
+2024-10-19 23:02:38,579 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/release_dates, Data=
+            fields game, date, platform;
+            where date >= 1729314000 & date <= 1729918800;
+            sort date asc;
+        
+2024-10-19 23:02:38,582 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-19 23:02:39,115 DEBUG: https://api.igdb.com:443 "POST /v4/release_dates HTTP/11" 200 None
+2024-10-19 23:02:39,118 DEBUG: IGDB Release Dates Response: [{'id': 631369, 'date': 1729382400, 'game': 314034, 'platform': 34}, {'id': 650715, 'date': 1729382400, 'game': 318953, 'platform': 471}, {'id': 650716, 'date': 1729382400, 'game': 318953, 'platform': 386}, {'id': 654270, 'date': 1729382400, 'game': 306358, 'platform': 6}, {'id': 654271, 'date': 1729382400, 'game': 306358, 'platform': 14}, {'id': 654272, 'date': 1729382400, 'game': 306358, 'platform': 3}, {'id': 655215, 'date': 1729382400, 'game': 288044, 'platform': 34}, {'id': 655216, 'date': 1729382400, 'game': 288044, 'platform': 39}, {'id': 415690, 'date': 1729468800, 'game': 223326, 'platform': 6}, {'id': 415691, 'date': 1729468800, 'game': 223326, 'platform': 14}]
+2024-10-19 23:02:39,118 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/games, Data=
+            fields id, name;
+            where id = 223326;
+        
+2024-10-19 23:02:39,122 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-19 23:02:39,626 DEBUG: https://api.igdb.com:443 "POST /v4/games HTTP/11" 200 None
+2024-10-19 23:02:39,628 DEBUG: IGDB Games Response for ID 223326: [{'id': 223326, 'name': 'SCP: Facility'}]
+2024-10-19 23:02:39,628 WARNING: Game ID 314034 not found in game data or duplicate.
+2024-10-19 23:02:39,629 WARNING: Game ID 318953 not found in game data or duplicate.
+2024-10-19 23:02:39,629 WARNING: Game ID 318953 not found in game data or duplicate.
+2024-10-19 23:02:39,629 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 23:02:39,629 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 23:02:39,629 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 23:02:39,629 WARNING: Game ID 288044 not found in game data or duplicate.
+2024-10-19 23:02:39,629 WARNING: Game ID 288044 not found in game data or duplicate.
+2024-10-19 23:02:39,629 WARNING: Game ID 223326 not found in game data or duplicate.
+2024-10-19 23:02:39,629 INFO: Retrieved 1 game releases
+2024-10-19 23:02:39,630 INFO: Calculated excitement score for Venom: The Last Dance: 80.20
+2024-10-19 23:02:39,630 INFO: Calculated excitement score for Bull Run: 53.01
+2024-10-19 23:02:39,630 INFO: Calculated excitement score for Nightmare Hospital: 52.43
+2024-10-19 23:02:39,630 INFO: Calculated excitement score for Holiday Crashers: 50.81
+2024-10-19 23:02:39,630 INFO: Calculated excitement score for Conclave: 47.27
+2024-10-19 23:02:39,630 INFO: Calculated excitement score for Lost & Found in Cleveland: 49.27
+2024-10-19 23:02:39,630 INFO: Calculated excitement score for Love, Danielle: 48.78
+2024-10-19 23:02:39,630 INFO: Calculated excitement score for To Pee or Not to Pee: 47.87
+2024-10-19 23:02:39,631 INFO: Calculated excitement score for Stealing Pulp Fiction: 47.80
+2024-10-19 23:02:39,631 INFO: Calculated excitement score for Love Live! Nijigasaki High School Idol Club 7th Live! NEW TOKIMEKI LAND: 47.80
+2024-10-19 23:02:39,631 INFO: Calculated excitement score for The Metropolitan Opera: Grounded: 47.46
+2024-10-19 23:02:39,631 INFO: Calculated excitement score for The Return: 47.43
+2024-10-19 23:02:39,631 INFO: Calculated excitement score for Boundary Waters: 47.13
+2024-10-19 23:02:39,631 INFO: Calculated excitement score for The Gatekeeper: 46.68
+2024-10-19 23:02:39,631 INFO: Calculated excitement score for The Grimm Backward: 45.74
+2024-10-19 23:02:39,631 INFO: Calculated excitement score for Midwest Sessions: 45.33
+2024-10-19 23:02:39,631 INFO: Calculated excitement score for Viva Verdi!: 44.95
+2024-10-19 23:02:39,632 INFO: Calculated excitement score for Atypical Pirate: 44.90
+2024-10-19 23:02:39,632 INFO: Calculated excitement score for Sans film: 44.76
+2024-10-19 23:02:39,632 INFO: Calculated excitement score for Something Better Change: 44.71
+2024-10-19 23:02:39,632 INFO: Calculated excitement score for Ici tout commence: 52.00
+2024-10-19 23:02:39,632 INFO: Calculated excitement score for Chronicles of the Sun: 52.00
+2024-10-19 23:02:39,632 INFO: Calculated excitement score for Pulang Araw: 57.10
+2024-10-19 23:02:39,632 INFO: Calculated excitement score for Plus belle la vie, encore plus belle: 52.00
+2024-10-19 23:02:39,632 INFO: Calculated excitement score for Pinoy Big Brother: 52.00
+2024-10-19 23:02:39,632 INFO: Calculated excitement score for Tagesschau: 52.00
+2024-10-19 23:02:39,632 INFO: Calculated excitement score for Mom for rent: 52.00
+2024-10-19 23:02:39,632 INFO: Calculated excitement score for The First Years: 52.00
+2024-10-19 23:02:39,633 INFO: Calculated excitement score for El Conde: Amor y Honor: 52.00
+2024-10-19 23:02:39,633 INFO: Calculated excitement score for Gutfeld!: 52.00
+2024-10-19 23:02:39,633 INFO: Calculated excitement score for Gute Zeiten, schlechte Zeiten: 52.00
+2024-10-19 23:02:39,633 INFO: Calculated excitement score for Fugitivas, en busca de la libertad: 52.00
+2024-10-19 23:02:39,633 INFO: Calculated excitement score for Strictly Come Dancing: It Takes Two: 52.00
+2024-10-19 23:02:39,633 INFO: Calculated excitement score for Kelders van Geheime: 52.00
+2024-10-19 23:02:39,633 INFO: Calculated excitement score for Ready Steady Cook South Africa: 52.00
+2024-10-19 23:02:39,633 INFO: Calculated excitement score for Agatha All Along: 72.40
+2024-10-19 23:02:39,633 INFO: Calculated excitement score for The People's Police: 78.10
+2024-10-19 23:02:39,633 INFO: Calculated excitement score for FROM: 52.00
+2024-10-19 23:02:39,633 INFO: Calculated excitement score for Volta por Cima: 76.00
+2024-10-19 23:02:39,633 INFO: Calculated excitement score for Mania de Você: 69.70
+2024-10-19 23:02:39,634 INFO: Calculated excitement score for SCP: Facility: 59.00
+2024-10-19 23:04:07,798 INFO: Starting Wake Up Babe application
+2024-10-19 23:04:07,798 INFO: Fetching movie releases from 2024-10-19 to 2024-10-26
+2024-10-19 23:04:07,827 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-19 23:04:07,929 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/movie?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-19&primary_release_date.lte=2024-10-26&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-19 23:04:07,930 INFO: Retrieved 20 movie releases
+2024-10-19 23:04:07,930 INFO: Fetching tv releases from 2024-10-19 to 2024-10-26
+2024-10-19 23:04:07,932 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-19 23:04:08,020 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/tv?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-19&primary_release_date.lte=2024-10-26&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-19 23:04:08,021 INFO: Retrieved 20 tv releases
+2024-10-19 23:04:08,084 DEBUG: Starting new HTTPS connection (1): id.twitch.tv:443
+2024-10-19 23:04:08,570 DEBUG: https://id.twitch.tv:443 "POST /oauth2/token?client_id=futiq5agsqffytatg4hy5k8mnb5uyg&client_secret=6fzys4ry675m8smpjqzbpgvxd7l5n8&grant_type=client_credentials HTTP/11" 200 93
+2024-10-19 23:04:08,570 DEBUG: IGDB Access Token Response: {'access_token': '0c7enstydiyirtkl2ton8dsnc8s8n9', 'expires_in': 4961787, 'token_type': 'bearer'}
+2024-10-19 23:04:08,571 INFO: Fetching game releases from 2024-10-19 to 2024-10-26
+2024-10-19 23:04:08,574 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/release_dates, Data=
+            fields game, date, platform;
+            where date >= 1729314000 & date <= 1729918800;
+            sort date asc;
+        
+2024-10-19 23:04:08,578 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-19 23:04:09,169 DEBUG: https://api.igdb.com:443 "POST /v4/release_dates HTTP/11" 200 None
+2024-10-19 23:04:09,171 DEBUG: IGDB Release Dates Response: [{'id': 631369, 'date': 1729382400, 'game': 314034, 'platform': 34}, {'id': 650715, 'date': 1729382400, 'game': 318953, 'platform': 471}, {'id': 650716, 'date': 1729382400, 'game': 318953, 'platform': 386}, {'id': 654270, 'date': 1729382400, 'game': 306358, 'platform': 6}, {'id': 654271, 'date': 1729382400, 'game': 306358, 'platform': 14}, {'id': 654272, 'date': 1729382400, 'game': 306358, 'platform': 3}, {'id': 655215, 'date': 1729382400, 'game': 288044, 'platform': 34}, {'id': 655216, 'date': 1729382400, 'game': 288044, 'platform': 39}, {'id': 415690, 'date': 1729468800, 'game': 223326, 'platform': 6}, {'id': 415691, 'date': 1729468800, 'game': 223326, 'platform': 14}]
+2024-10-19 23:04:09,171 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/games, Data=
+            fields id, name;
+            where id = (318953,288044,314034,306358,223326);
+        
+2024-10-19 23:04:09,174 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-19 23:04:09,643 DEBUG: https://api.igdb.com:443 "POST /v4/games HTTP/11" 200 None
+2024-10-19 23:04:09,644 DEBUG: IGDB Games Response for IDs [318953, 288044, 314034, 306358, 223326]: [{'id': 223326, 'name': 'SCP: Facility'}, {'id': 288044, 'name': 'Neko Atsume 2'}, {'id': 306358, 'name': "Devil's Way"}, {'id': 314034, 'name': 'Dark Legacy'}, {'id': 318953, 'name': 'Extinction Facility'}]
+2024-10-19 23:04:09,645 WARNING: Game ID 318953 not found in game data or duplicate.
+2024-10-19 23:04:09,645 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 23:04:09,645 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 23:04:09,645 WARNING: Game ID 288044 not found in game data or duplicate.
+2024-10-19 23:04:09,645 WARNING: Game ID 223326 not found in game data or duplicate.
+2024-10-19 23:04:09,645 INFO: Retrieved 5 game releases
+2024-10-19 23:04:09,645 INFO: Calculated excitement score for Venom: The Last Dance: 80.20
+2024-10-19 23:04:09,645 INFO: Calculated excitement score for Bull Run: 53.01
+2024-10-19 23:04:09,645 INFO: Calculated excitement score for Nightmare Hospital: 52.43
+2024-10-19 23:04:09,645 INFO: Calculated excitement score for Holiday Crashers: 50.81
+2024-10-19 23:04:09,645 INFO: Calculated excitement score for Conclave: 47.27
+2024-10-19 23:04:09,646 INFO: Calculated excitement score for Lost & Found in Cleveland: 49.27
+2024-10-19 23:04:09,646 INFO: Calculated excitement score for Love, Danielle: 48.78
+2024-10-19 23:04:09,646 INFO: Calculated excitement score for To Pee or Not to Pee: 47.87
+2024-10-19 23:04:09,646 INFO: Calculated excitement score for Stealing Pulp Fiction: 47.80
+2024-10-19 23:04:09,646 INFO: Calculated excitement score for Love Live! Nijigasaki High School Idol Club 7th Live! NEW TOKIMEKI LAND: 47.80
+2024-10-19 23:04:09,646 INFO: Calculated excitement score for The Metropolitan Opera: Grounded: 47.46
+2024-10-19 23:04:09,646 INFO: Calculated excitement score for The Return: 47.43
+2024-10-19 23:04:09,646 INFO: Calculated excitement score for Boundary Waters: 47.13
+2024-10-19 23:04:09,646 INFO: Calculated excitement score for The Gatekeeper: 46.68
+2024-10-19 23:04:09,646 INFO: Calculated excitement score for The Grimm Backward: 45.74
+2024-10-19 23:04:09,646 INFO: Calculated excitement score for Midwest Sessions: 45.33
+2024-10-19 23:04:09,646 INFO: Calculated excitement score for Viva Verdi!: 44.95
+2024-10-19 23:04:09,647 INFO: Calculated excitement score for Atypical Pirate: 44.90
+2024-10-19 23:04:09,647 INFO: Calculated excitement score for Sans film: 44.76
+2024-10-19 23:04:09,647 INFO: Calculated excitement score for Something Better Change: 44.71
+2024-10-19 23:04:09,647 INFO: Calculated excitement score for Ici tout commence: 52.00
+2024-10-19 23:04:09,647 INFO: Calculated excitement score for Chronicles of the Sun: 52.00
+2024-10-19 23:04:09,647 INFO: Calculated excitement score for Pulang Araw: 57.10
+2024-10-19 23:04:09,647 INFO: Calculated excitement score for Plus belle la vie, encore plus belle: 52.00
+2024-10-19 23:04:09,647 INFO: Calculated excitement score for Pinoy Big Brother: 52.00
+2024-10-19 23:04:09,647 INFO: Calculated excitement score for Tagesschau: 52.00
+2024-10-19 23:04:09,647 INFO: Calculated excitement score for Mom for rent: 52.00
+2024-10-19 23:04:09,648 INFO: Calculated excitement score for The First Years: 52.00
+2024-10-19 23:04:09,648 INFO: Calculated excitement score for El Conde: Amor y Honor: 52.00
+2024-10-19 23:04:09,648 INFO: Calculated excitement score for Gutfeld!: 52.00
+2024-10-19 23:04:09,648 INFO: Calculated excitement score for Gute Zeiten, schlechte Zeiten: 52.00
+2024-10-19 23:04:09,648 INFO: Calculated excitement score for Fugitivas, en busca de la libertad: 52.00
+2024-10-19 23:04:09,648 INFO: Calculated excitement score for Strictly Come Dancing: It Takes Two: 52.00
+2024-10-19 23:04:09,648 INFO: Calculated excitement score for Kelders van Geheime: 52.00
+2024-10-19 23:04:09,648 INFO: Calculated excitement score for Ready Steady Cook South Africa: 52.00
+2024-10-19 23:04:09,648 INFO: Calculated excitement score for Agatha All Along: 72.40
+2024-10-19 23:04:09,649 INFO: Calculated excitement score for The People's Police: 78.10
+2024-10-19 23:04:09,649 INFO: Calculated excitement score for FROM: 52.00
+2024-10-19 23:04:09,651 INFO: Calculated excitement score for Volta por Cima: 76.00
+2024-10-19 23:04:09,651 INFO: Calculated excitement score for Mania de Você: 69.70
+2024-10-19 23:04:09,652 INFO: Calculated excitement score for Dark Legacy: 58.70
+2024-10-19 23:04:09,652 INFO: Calculated excitement score for Extinction Facility: 58.70
+2024-10-19 23:04:09,652 INFO: Calculated excitement score for Devil's Way: 58.70
+2024-10-19 23:04:09,652 INFO: Calculated excitement score for Neko Atsume 2: 58.70
+2024-10-19 23:04:09,652 INFO: Calculated excitement score for SCP: Facility: 59.00
+2024-10-19 23:24:35,790 INFO: Starting Wake Up Babe application
+2024-10-19 23:24:35,790 INFO: Fetching movie releases from 2024-10-19 to 2024-10-26
+2024-10-19 23:24:35,816 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-19 23:24:35,972 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/movie?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-19&primary_release_date.lte=2024-10-26&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-19 23:24:35,973 INFO: Retrieved 20 movie releases
+2024-10-19 23:24:35,973 INFO: Fetching tv releases from 2024-10-19 to 2024-10-26
+2024-10-19 23:24:35,976 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-19 23:24:36,055 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/tv?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-19&primary_release_date.lte=2024-10-26&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-19 23:24:36,057 INFO: Retrieved 20 tv releases
+2024-10-19 23:24:36,107 DEBUG: Starting new HTTPS connection (1): id.twitch.tv:443
+2024-10-19 23:24:36,638 DEBUG: https://id.twitch.tv:443 "POST /oauth2/token?client_id=futiq5agsqffytatg4hy5k8mnb5uyg&client_secret=6fzys4ry675m8smpjqzbpgvxd7l5n8&grant_type=client_credentials HTTP/11" 200 93
+2024-10-19 23:24:36,638 DEBUG: IGDB Access Token Response: {'access_token': 'frts22atfb242tym9uhl8dtrq90ajw', 'expires_in': 5361472, 'token_type': 'bearer'}
+2024-10-19 23:24:36,639 INFO: Fetching game releases from 2024-10-19 to 2024-10-26
+2024-10-19 23:24:36,640 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/release_dates, Data=
+            fields game, date, platform;
+            where date >= 1729314000 & date <= 1729918800;
+            sort date asc;
+        
+2024-10-19 23:24:36,670 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-19 23:24:37,321 DEBUG: https://api.igdb.com:443 "POST /v4/release_dates HTTP/11" 200 None
+2024-10-19 23:24:37,323 DEBUG: IGDB Release Dates Response: [{'id': 631369, 'date': 1729382400, 'game': 314034, 'platform': 34}, {'id': 650715, 'date': 1729382400, 'game': 318953, 'platform': 471}, {'id': 650716, 'date': 1729382400, 'game': 318953, 'platform': 386}, {'id': 654270, 'date': 1729382400, 'game': 306358, 'platform': 6}, {'id': 654271, 'date': 1729382400, 'game': 306358, 'platform': 14}, {'id': 654272, 'date': 1729382400, 'game': 306358, 'platform': 3}, {'id': 655215, 'date': 1729382400, 'game': 288044, 'platform': 34}, {'id': 655216, 'date': 1729382400, 'game': 288044, 'platform': 39}, {'id': 415690, 'date': 1729468800, 'game': 223326, 'platform': 6}, {'id': 415691, 'date': 1729468800, 'game': 223326, 'platform': 14}]
+2024-10-19 23:24:37,323 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/games, Data=
+            fields id, name;
+            where id = (318953,288044,314034,306358,223326);
+        
+2024-10-19 23:24:37,326 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-19 23:24:37,790 DEBUG: https://api.igdb.com:443 "POST /v4/games HTTP/11" 200 None
+2024-10-19 23:24:37,791 DEBUG: IGDB Games Response for IDs [318953, 288044, 314034, 306358, 223326]: [{'id': 223326, 'name': 'SCP: Facility'}, {'id': 288044, 'name': 'Neko Atsume 2'}, {'id': 306358, 'name': "Devil's Way"}, {'id': 314034, 'name': 'Dark Legacy'}, {'id': 318953, 'name': 'Extinction Facility'}]
+2024-10-19 23:24:37,791 WARNING: Game ID 318953 not found in game data or duplicate.
+2024-10-19 23:24:37,792 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 23:24:37,792 WARNING: Game ID 306358 not found in game data or duplicate.
+2024-10-19 23:24:37,792 WARNING: Game ID 288044 not found in game data or duplicate.
+2024-10-19 23:24:37,792 WARNING: Game ID 223326 not found in game data or duplicate.
+2024-10-19 23:24:37,792 INFO: Retrieved 5 game releases
+2024-10-19 23:24:37,792 INFO: Calculated excitement score for Venom: The Last Dance: 80.20
+2024-10-19 23:24:37,792 INFO: Calculated excitement score for Bull Run: 46.40
+2024-10-19 23:24:37,792 INFO: Calculated excitement score for Nightmare Hospital: 46.41
+2024-10-19 23:24:37,792 INFO: Calculated excitement score for Holiday Crashers: 48.29
+2024-10-19 23:24:37,792 INFO: Calculated excitement score for Conclave: 45.26
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Lost & Found in Cleveland: 45.33
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Love, Danielle: 45.48
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for To Pee or Not to Pee: 44.65
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Stealing Pulp Fiction: 45.52
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Love Live! Nijigasaki High School Idol Club 7th Live! NEW TOKIMEKI LAND: 45.59
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for The Metropolitan Opera: Grounded: 45.29
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for The Return: 46.29
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Boundary Waters: 46.91
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for The Gatekeeper: 45.68
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for The Grimm Backward: 44.90
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Midwest Sessions: 44.98
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Viva Verdi!: 44.41
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Atypical Pirate: 44.14
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Sans film: 44.07
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Something Better Change: 44.25
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Ici tout commence: 52.00
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Chronicles of the Sun: 52.00
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Pulang Araw: 57.10
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Plus belle la vie, encore plus belle: 52.00
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Pinoy Big Brother: 52.00
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Tagesschau: 52.00
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Mom for rent: 52.00
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for The First Years: 52.00
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for El Conde: Amor y Honor: 52.00
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Gutfeld!: 52.00
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Gute Zeiten, schlechte Zeiten: 52.00
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Fugitivas, en busca de la libertad: 52.00
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Strictly Come Dancing: It Takes Two: 52.00
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Kelders van Geheime: 52.00
+2024-10-19 23:24:37,793 INFO: Calculated excitement score for Ready Steady Cook South Africa: 52.00
+2024-10-19 23:24:37,794 INFO: Calculated excitement score for Agatha All Along: 72.40
+2024-10-19 23:24:37,794 INFO: Calculated excitement score for The People's Police: 78.10
+2024-10-19 23:24:37,794 INFO: Calculated excitement score for FROM: 52.00
+2024-10-19 23:24:37,794 INFO: Calculated excitement score for Volta por Cima: 76.00
+2024-10-19 23:24:37,794 INFO: Calculated excitement score for Mania de Você: 69.70
+2024-10-19 23:24:37,794 INFO: Calculated excitement score for Dark Legacy: 58.70
+2024-10-19 23:24:37,794 INFO: Calculated excitement score for Extinction Facility: 58.70
+2024-10-19 23:24:37,794 INFO: Calculated excitement score for Devil's Way: 58.70
+2024-10-19 23:24:37,794 INFO: Calculated excitement score for Neko Atsume 2: 58.70
+2024-10-19 23:24:37,794 INFO: Calculated excitement score for SCP: Facility: 59.00
+2024-10-22 17:55:11,043 INFO: Starting Wake Up Babe application
+2024-10-22 17:55:11,043 INFO: Fetching movie releases from 2024-10-22 to 2024-10-29
+2024-10-22 17:55:11,123 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-22 17:55:11,457 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/movie?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-22&primary_release_date.lte=2024-10-29&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-22 17:55:11,459 INFO: Retrieved 20 movie releases
+2024-10-22 17:55:11,459 INFO: Fetching tv releases from 2024-10-22 to 2024-10-29
+2024-10-22 17:55:11,464 DEBUG: Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-10-22 17:55:11,716 DEBUG: https://api.themoviedb.org:443 "GET /3/discover/tv?api_key=581cd020cab5739582c25676fcc5839c&primary_release_date.gte=2024-10-22&primary_release_date.lte=2024-10-29&sort_by=popularity.desc HTTP/11" 200 None
+2024-10-22 17:55:11,718 INFO: Retrieved 20 tv releases
+2024-10-22 17:55:11,817 DEBUG: Starting new HTTPS connection (1): id.twitch.tv:443
+2024-10-22 17:55:12,599 DEBUG: https://id.twitch.tv:443 "POST /oauth2/token?client_id=futiq5agsqffytatg4hy5k8mnb5uyg&client_secret=6fzys4ry675m8smpjqzbpgvxd7l5n8&grant_type=client_credentials HTTP/11" 200 93
+2024-10-22 17:55:12,601 DEBUG: IGDB Access Token Response: {'access_token': 't19hj8ruyr95s6blwdut1cabu0ld25', 'expires_in': 5455742, 'token_type': 'bearer'}
+2024-10-22 17:55:12,602 INFO: Fetching game releases from 2024-10-22 to 2024-10-29
+2024-10-22 17:55:12,605 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/release_dates, Data=
+            fields game, date, platform;
+            where date >= 1729573200 & date <= 1730178000;
+            sort date asc;
+        
+2024-10-22 17:55:12,690 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-22 17:55:13,581 DEBUG: https://api.igdb.com:443 "POST /v4/release_dates HTTP/11" 200 None
+2024-10-22 17:55:13,583 DEBUG: IGDB Release Dates Response: [{'id': 632944, 'date': 1729641600, 'game': 182335, 'platform': 6}, {'id': 632951, 'date': 1729641600, 'game': 314431, 'platform': 6}, {'id': 633806, 'date': 1729641600, 'game': 314431, 'platform': 14}, {'id': 640075, 'date': 1729641600, 'game': 302961, 'platform': 6}, {'id': 642534, 'date': 1729641600, 'game': 316914, 'platform': 6}, {'id': 643376, 'date': 1729641600, 'game': 245847, 'platform': 6}, {'id': 643610, 'date': 1729641600, 'game': 217338, 'platform': 6}, {'id': 644147, 'date': 1729641600, 'game': 283881, 'platform': 6}, {'id': 646252, 'date': 1729641600, 'game': 306363, 'platform': 6}, {'id': 646572, 'date': 1729641600, 'game': 245847, 'platform': 6}]
+2024-10-22 17:55:13,583 DEBUG: Making request to IGDB: URL=https://api.igdb.com/v4/games, Data=
+            fields id, name;
+            where id = (283881,302961,316914,245847,217338,306363,182335,314431);
+        
+2024-10-22 17:55:13,587 DEBUG: Starting new HTTPS connection (1): api.igdb.com:443
+2024-10-22 17:55:14,172 DEBUG: https://api.igdb.com:443 "POST /v4/games HTTP/11" 200 None
+2024-10-22 17:55:14,174 DEBUG: IGDB Games Response for IDs [283881, 302961, 316914, 245847, 217338, 306363, 182335, 314431]: [{'id': 182335, 'name': 'Zero Sievert'}, {'id': 217338, 'name': 'Creatures of War'}, {'id': 245847, 'name': 'Rivals of Aether II'}, {'id': 283881, 'name': 'Age of History 3'}, {'id': 302961, 'name': 'Ban: The Prologue of Gucha Gucha'}, {'id': 306363, 'name': 'Told God: The Legacy of Cthulhu'}, {'id': 314431, 'name': 'Wilmot Works It Out'}, {'id': 316914, 'name': 'World of Unlit'}]
+2024-10-22 17:55:14,175 WARNING: Game ID 314431 not found in game data or duplicate.
+2024-10-22 17:55:14,175 WARNING: Game ID 245847 not found in game data or duplicate.
+2024-10-22 17:55:14,175 INFO: Retrieved 8 game releases
+2024-10-22 17:55:14,175 INFO: Calculated excitement score for Venom: The Last Dance: 81.70
+2024-10-22 17:55:14,176 INFO: Calculated excitement score for Rippy: 63.50
+2024-10-22 17:55:14,176 INFO: Calculated excitement score for MadS: 55.90
+2024-10-22 17:55:14,176 INFO: Calculated excitement score for Conclave: 55.44
+2024-10-22 17:55:14,176 INFO: Calculated excitement score for Don't Move: 49.41
+2024-10-22 17:55:14,176 INFO: Calculated excitement score for An Unfinished Film: 49.25
+2024-10-22 17:55:14,176 INFO: Calculated excitement score for Some Shooting Stars: 47.78
+2024-10-22 17:55:14,176 INFO: Calculated excitement score for Monsieur Aznavour: 46.37
+2024-10-22 17:55:14,176 INFO: Calculated excitement score for Heavy Snow: 46.29
+2024-10-22 17:55:14,177 INFO: Calculated excitement score for Parthenope: 45.63
+2024-10-22 17:55:14,177 INFO: Calculated excitement score for The Vampire and the Vigilante: 45.31
+2024-10-22 17:55:14,177 INFO: Calculated excitement score for Taboo: Family Secrets: 45.27
+2024-10-22 17:55:14,177 INFO: Calculated excitement score for Wounded Healer: 44.67
+2024-10-22 17:55:14,177 INFO: Calculated excitement score for The Experiencers: 44.39
+2024-10-22 17:55:14,177 INFO: Calculated excitement score for Into the Wonderwoods: 44.61
+2024-10-22 17:55:14,177 INFO: Calculated excitement score for El sótano: 44.17
+2024-10-22 17:55:14,177 INFO: Calculated excitement score for Gatekeepers: 44.17
+2024-10-22 17:55:14,177 INFO: Calculated excitement score for 4PM: 43.97
+2024-10-22 17:55:14,177 INFO: Calculated excitement score for The Hunt for Lady Olive & the German Submarine: 43.34
+2024-10-22 17:55:14,177 INFO: Calculated excitement score for Cracked: 43.31
+2024-10-22 17:55:14,178 INFO: Calculated excitement score for Ici tout commence: 52.00
+2024-10-22 17:55:14,178 INFO: Calculated excitement score for Pinoy Big Brother: 52.00
+2024-10-22 17:55:14,178 INFO: Calculated excitement score for Chronicles of the Sun: 52.00
+2024-10-22 17:55:14,178 INFO: Calculated excitement score for Tagesschau: 52.00
+2024-10-22 17:55:14,178 INFO: Calculated excitement score for ¿Ganar o servir?: 52.00
+2024-10-22 17:55:14,178 INFO: Calculated excitement score for The People's Police: 77.20
+2024-10-22 17:55:14,178 INFO: Calculated excitement score for FROM: 52.00
+2024-10-22 17:55:14,178 INFO: Calculated excitement score for Mom for rent: 52.00
+2024-10-22 17:55:14,178 INFO: Calculated excitement score for The First Years: 52.00
+2024-10-22 17:55:14,179 INFO: Calculated excitement score for Fugitivas, en busca de la libertad: 52.00
+2024-10-22 17:55:14,179 INFO: Calculated excitement score for Gutfeld!: 52.00
+2024-10-22 17:55:14,179 INFO: Calculated excitement score for Strictly Come Dancing: It Takes Two: 52.00
+2024-10-22 17:55:14,179 INFO: Calculated excitement score for Kelders van Geheime: 52.00
+2024-10-22 17:55:14,179 INFO: Calculated excitement score for Ready Steady Cook South Africa: 52.00
+2024-10-22 17:55:14,179 INFO: Calculated excitement score for Gran hermano: 52.00
+2024-10-22 17:55:14,179 INFO: Calculated excitement score for Big Brother: Live Stream: 52.00
+2024-10-22 17:55:14,179 INFO: Calculated excitement score for Volta por Cima: 75.10
+2024-10-22 17:55:14,180 INFO: Calculated excitement score for Despite the law: 70.60
+2024-10-22 17:55:14,180 INFO: Calculated excitement score for The Agent: 62.20
+2024-10-22 17:55:14,180 INFO: Calculated excitement score for Ulice: 52.00
+2024-10-22 17:55:14,180 INFO: Calculated excitement score for Zero Sievert: 58.70
+2024-10-22 17:55:14,181 INFO: Calculated excitement score for Wilmot Works It Out: 58.70
+2024-10-22 17:55:14,182 INFO: Calculated excitement score for Ban: The Prologue of Gucha Gucha: 58.70
+2024-10-22 17:55:14,182 INFO: Calculated excitement score for World of Unlit: 58.70
+2024-10-22 17:55:14,182 INFO: Calculated excitement score for Rivals of Aether II: 58.70
+2024-10-22 17:55:14,182 INFO: Calculated excitement score for Creatures of War: 58.70
+2024-10-22 17:55:14,182 INFO: Calculated excitement score for Age of History 3: 58.70
+2024-10-22 17:55:14,182 INFO: Calculated excitement score for Told God: The Legacy of Cthulhu: 58.70
