@@ -1,39 +1,78 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
 }
 
-h1 {
-    color: #333;
+.navbar-brand {
+    font-weight: 600;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+.card {
+    border: none;
+    border-radius: 15px;
 }
 
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
+.card-title {
+    color: #2c3e50;
+    font-weight: 600;
 }
 
-th {
-    background-color: #f4f4f4;
+.table th {
+    font-weight: 600;
 }
 
-.error-message {
-    background-color: #ffebee;
-    color: #c62828;
-    padding: 15px;
-    margin: 20px 0;
+.progress {
+    height: 25px;
+    border-radius: 12px;
+}
+
+.progress-bar {
+    font-weight: 600;
+}
+
+.badge {
+    padding: 8px 12px;
+    font-weight: 500;
+}
+
+.alert {
+    border-radius: 12px;
+}
+
+/* Hover effect for table rows */
+.table-hover tbody tr:hover {
+    background-color: rgba(0,0,0,.03);
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Custom scrollbar for table */
+.table-responsive::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #f1f1f1;
     border-radius: 4px;
-    border: 1px solid #ef9a9a;
 }
 
-.no-results {
-    text-align: center;
-    color: #666;
-    padding: 20px;
-    font-style: italic;
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.bg-movie {
+    background-color: #007bff;
+}
+
+.bg-tv {
+    background-color: #6f42c1;
+}
+
+.bg-game {
+    background-color: #28a745;
 } 
