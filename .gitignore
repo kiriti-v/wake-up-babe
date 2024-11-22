@@ -22,6 +22,7 @@ build/
 *.swp
 *.swo
 instructions.md
+web-instructions.md
 
 # Logs
 *.log
