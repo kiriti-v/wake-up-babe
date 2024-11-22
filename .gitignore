@@ -30,3 +30,11 @@ app_debug.log
 # OS specific files
 .DS_Store
 Thumbs.db
+
+# Ensure templates and static are tracked
+!templates/
+!static/.env
+app_debug.log
+__pycache__/
+*.pyc
+venv/

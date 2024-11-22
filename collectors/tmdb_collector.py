@@ -1,44 +1,59 @@
+import os
 import requests
 import logging
+from datetime import datetime
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 class TMDBCollector:
-    def __init__(self, api_key):
-        self.api_key = api_key
-        self.base_url = "https://api.themoviedb.org/3"
+    def __init__(self, start_date, end_date):
+        self.api_key = os.getenv('TMDB_API_KEY')
+        self.start_date = start_date
+        self.end_date = end_date
+        self.base_url = 'https://api.themoviedb.org/3'
+        self.session = requests.Session()
+        self.session.params = {'api_key': self.api_key, 'language': 'en-US'}
 
-    def get_releases(self, media_type, start_date, end_date, cache):
-        cache_key = f'tmdb_{media_type}_{start_date}_{end_date}'
-        if cache and cache_key in cache:
-            return cache[cache_key]
-
-        logging.info(f"Fetching {media_type} releases from {start_date} to {end_date}")
-        url = f"{self.base_url}/discover/{media_type}"
+    def get_movies(self):
+        logging.info('Fetching movies from TMDB')
+        url = f"{self.base_url}/discover/movie"
         params = {
-            'api_key': self.api_key,
-            'primary_release_date.gte': start_date,
-            'primary_release_date.lte': end_date,
+            'primary_release_date.gte': self.start_date,
+            'primary_release_date.lte': self.end_date,
             'sort_by': 'popularity.desc'
         }
+        response = self.session.get(url, params=params)
+        data = response.json()
+        movies = []
+        for item in data.get('results', []):
+            movie = {
+                'title': item['title'],
+                'release_date': item['release_date'],
+                'popularity': item['popularity'],
+                'type': 'movie'
+            }
+            movies.append(movie)
+        return movies
 
-        try:
-            response = requests.get(url, params=params)
-            response.raise_for_status()
-            data = response.json()
-            results = data.get('results', [])
-            releases = [self._format_release(item, media_type) for item in results]
-            if cache is not None:
-                cache[cache_key] = releases
-            logging.info(f"Retrieved {len(results)} {media_type} releases")
-            return releases
-        except Exception as e:
-            logging.error(f"Error fetching {media_type} releases: {e}")
-            return []
-
-    def _format_release(self, item, media_type):
-        return {
-            'title': item.get('title' if media_type == 'movie' else 'name'),
-            'release_date': item.get('release_date' if media_type == 'movie' else 'first_air_date'),
-            'type': media_type,
-            'id': item.get('id'),
-            'popularity': item.get('popularity', 0)
+    def get_tv_shows(self):
+        logging.info('Fetching TV shows from TMDB')
+        url = f"{self.base_url}/discover/tv"
+        params = {
+            'first_air_date.gte': self.start_date,
+            'first_air_date.lte': self.end_date,
+            'sort_by': 'popularity.desc'
         }
+        response = self.session.get(url, params=params)
+        data = response.json()
+        tv_shows = []
+        for item in data.get('results', []):
+            tv_show = {
+                'title': item['name'],
+                'release_date': item['first_air_date'],
+                'popularity': item['popularity'],
+                'type': 'tv'
+            }
+            tv_shows.append(tv_show)
+        return tv_shows
